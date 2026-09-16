@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #111;
+  background-color: #E1D4C9;
+  color: #403F3D;
+}
+.header__logo img{
+    width: 100px;
+    height: 60px;
+
+}
+.header__container{
+    max-width: 1360px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80px;
+    gap: 16px;
+}
+.header__menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.header__menu-link, .menu-link {
+  color: #403f3d;
+  text-decoration: none;
+  font-size: 16px;
+}
+.header__actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+.theme-switcher__sun img, 
+.theme-switcher__moon img{
+    width: 36px;
+    height: 36px;
+}
+.theme-switcher{
+    background-color: inherit;
+    border-radius: 100px;
+    border: 1px #C1B6AD solid;
+    width: 88px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.menu-link__icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.header__burger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__burger-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin: 5px 0;
+  background-color: #403f3d;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+@media (max-width: 768px) {
+  .header__container {
+    position: relative;
+    min-height: 72px;
+    padding: 0 40px;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__burger {
+    display: block;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid #665f55;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .header__burger-line {
+    display: block;
+    width: 16px;
+    height: 2px;
+    margin: 4px auto;
+    border-radius: 2px;
+    background-color: #403f3d;
+  }
+
+  .header__actions {
+    gap: 16px;
+  }
+
+  .header__nav.header__nav--open {
+    position: absolute;
+    display: flex;
+    top: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    display: block;
+    padding: 24px;
+    background-color: #e1d4c9;
+  }
+
+  .header__menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .header__menu-link {
+    font-size: 16px;
+  }
+  .menu-link {
+  display: none;
+}
+}
